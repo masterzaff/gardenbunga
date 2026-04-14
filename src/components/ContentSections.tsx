@@ -128,7 +128,7 @@ const ContentSections = () => {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { value: "-34%", label: "VRAM", desc: "Pengurangan jejak memori saat inference sequence panjang." },
-            { value: "O(n)", label: "Scaling", desc: "Sebagian blok attention diganti selective state space." },
+            { value: "Fast", label: "Scaling", desc: "Sebagian blok attention diganti selective state space." },
             { value: "4 Config", label: "Hybrid Ratio", desc: "Eksplorasi 1:1, 1:3, 1:5, dan late-transformer layout." },
             { value: "ID TTS", label: "Target", desc: "Difokuskan untuk kualitas suara bahasa Indonesia." },
           ].map((item) => (
