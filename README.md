@@ -37,6 +37,9 @@
   </tr>
 </table>
 
+This repo available on,
+https://masterzaff.github.io/gardenbunga/
+
 ## 1. Project Purpose
 
 This app is a content-focused frontend that combines rich typography, motion, and mathematical rendering (KaTeX) inside a single-page React application.
