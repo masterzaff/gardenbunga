@@ -8,8 +8,22 @@ const Index = () => {
   useEffect(() => {
     let rafId = 0;
     let loadFrameId = 0;
+    const isMobileMotionTarget = window.matchMedia("(max-width: 768px), (pointer: coarse)").matches;
 
     const root = document.documentElement;
+
+    if (isMobileMotionTarget) {
+      root.style.setProperty("--scroll-y", "0");
+      root.style.setProperty("--scroll-progress", "0");
+      loadFrameId = requestAnimationFrame(() => setIsLoaded(true));
+
+      return () => {
+        if (loadFrameId) {
+          cancelAnimationFrame(loadFrameId);
+        }
+      };
+    }
+
     const updateScrollVars = () => {
       const y = window.scrollY;
       const maxScrollable = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);

@@ -447,6 +447,45 @@
     scroll-padding-top: 9.75rem;
   }
 
+  .page-shell::before,
+  .hero-parallax {
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+
+  .article-section {
+    backdrop-filter: none;
+  }
+
+  .hero-reveal,
+  .section-fade,
+  .section-fade.visible {
+    filter: none !important;
+  }
+
+  .section-fade {
+    transform: translateY(14px);
+    transition: opacity 0.42s ease, transform 0.42s ease;
+  }
+
+  .section-fade.visible .section-title {
+    animation: typography-rise-in 0.44s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .section-fade.visible .section-paragraph,
+  .section-fade.visible figcaption p,
+  .section-fade.visible pre {
+    animation-duration: 0.44s;
+  }
+
+  .motion-card,
+  .motion-chip,
+  .cta-btn,
+  .figure-card img {
+    transition-duration: 0.18s;
+  }
+
   .equation-content .katex-display {
     padding-right: 0;
   }
@@ -456,6 +495,24 @@
     display: inline-flex;
     margin: 0 0 0.8rem 1rem;
     transform: none;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .motion-chip:hover,
+  .cta-btn:hover,
+  .motion-card:hover,
+  .figure-card:hover img {
+    transform: none;
+    box-shadow: inherit;
+  }
+
+  .section-fade {
+    filter: none;
+  }
+
+  .section-fade.visible .section-title {
+    animation: typography-rise-in 0.44s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 }
 
