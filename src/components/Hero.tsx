@@ -22,7 +22,7 @@ const actions = [
   },
   {
     label: "Demo",
-    href: "https://addressing-networking-eat-aye.trycloudflare.com/",
+    href: "https://cemetery-unavailable-search-kim.trycloudflare.com/",
     icon: Play,
   },
 ];
