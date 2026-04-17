@@ -192,7 +192,7 @@ const ContentSections = () => {
       </Section>
 
       <Section id="architecture">
-        <SectionTitle>Architecture</SectionTitle>
+        <SectionTitle>Future Work</SectionTitle>
         <P>
           Arsitektur GardenBunga memakai pola interleaved di backbone 24 layer. Transformer dipertahankan pada titik tertentu untuk global context dan detail prosodi, sementara blok lain diganti Mamba agar memory growth lebih terkendali. Secara kasar, kompleksitas hybrid bisa ditulis sebagai:
         </P>
